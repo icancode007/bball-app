@@ -1,32 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  background-color: rgb(244, 228, 201);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+.teamIcon {
+  margin: 5px;
+}
+
+.modal {
+  box-sizing: content-box;
+  height: 500px;
+  width: inherit;
+  text-align: center;
+  border-style: solid;
+  margin: 15px;
+}
+
+.top-five-in-cards {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.player-card {
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: #828282;
+  margin: 0.5rem;
+  flex-grow: 0.1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-img {
+  margin-top: 10px;
+  width: 200px
+}
+
+.player-stats {
+  display:flex;
+  flex-direction: column;
 }
