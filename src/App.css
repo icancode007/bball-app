@@ -18,6 +18,7 @@ nav {
 
 .modal {
   box-sizing: content-box;
+  border-radius: 0.5rem;
   height: 500px;
   width: inherit;
   text-align: center;
