@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import { Provider } from 'react-redux';
+// import { createStore, applyMiddleware  } from 'redux';
+// import reducers from './reducers';
+// import reduxPromise from 'redux-promise';
+import NavBar from './Components/NavBar/NavBar';
+import Modal from './Components/Modal/Modal';
+import TopFive from './Components/TopFive/TopFive';
+import players from './lib/nbaMock';
+
 import './App.css';
 
 class App extends Component {
   render() {
+    /*
+    const store = createStore(reducers, initialState, applyMiddleware(reduxPromise));
+    <Provider store={store}>
+    </Provider>
+    */
+    const teamList = ['LAL', 'BOS', 'GWS', 'ATL', 'SAS', 'CHI', 'PHX'];
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <NavBar teams={teamList}/>
+        <Modal/>
+        <TopFive isDisplayingAsRow={true} players={players}/>
       </div>
     );
   }
