@@ -8,6 +8,7 @@ const NbaConsts = {
     rpg: 'RPG: ',
     ftp: 'FT%: ',
     fgp: 'FG%: ',
+    fgp3: 'FGP3: ',
   }
 }
 export default NbaConsts;

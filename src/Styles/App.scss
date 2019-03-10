@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Acme', sans-serif;
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(244, 228, 201);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.teamIcon {
+  margin: 5px;
+}
+
+.modal {
+  box-sizing: content-box;
+  border-radius: 5px;
+  height: 500px;
+  width: inherit;
+  text-align: center;
+  border-style: solid;
+  margin: 15px;
+}
+
+.top-five-in-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-card {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #828282;
+  margin: 5px;
+  flex-grow: 0.1;
+  max-width: 218px;
+}
+
+.player-img {
+  margin-top: 10px;
+  width: 200px
+}
+
+.player-stats {
+  display:flex;
+  flex-direction: column;
+}
+
+
+.player-row {
+ display: flex;
+ border-style: solid;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ margin-left: 5px;
+ margin-right: 5px;
+}
+
+.player-img-for-row {
+  height: 100px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100px
+}
+
+.player-stats-for-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-weight: bold;
+}
+
+.top-idx {
+  height: 100px;
+  background-color: blue;
+  font-size: 24px;
+  font-family: monospace;
+}
+.prop-stats-for-row {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100px;
+  border-right-style: solid;
+}
+
+@mixin buttonBase {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  max-width: 148px;
+  width: 148px;
+  height: 48px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 20px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+   &:focus {
+     outline: none;
+   }
+}
+
+.basicButton {
+  @include buttonBase;
+  background-color: #1a97bd;
+  &:hover {
+    background-color: #017da3;
+  }
+}
+
+.rvmBtn {
+  @include buttonBase;
+  background-color: #ed4d4d;
+
+  &:hover {
+    background-color: #e43030;
+  }
+}

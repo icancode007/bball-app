@@ -8,7 +8,7 @@ import Modal from './Components/Modal/Modal';
 import TopFive from './Components/TopFive/TopFive';
 import players from './lib/nbaMock';
 
-import './App.css';
+import './Styles/App/App.css';
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <NavBar teams={teamList}/>
         <Modal/>
-        <TopFive isDisplayingAsRow={true} players={players}/>
+        <TopFive isDisplayingAsRow={false} players={players}/>
       </div>
     );
   }
