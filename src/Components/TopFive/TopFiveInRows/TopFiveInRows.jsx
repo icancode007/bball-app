@@ -1,18 +1,49 @@
 import React from 'react';
+import Button from '../../Button/Button';
+import NbaConsts from '../../../lib/nbaconstants';
 import PropTypes from 'prop-types';
 
+
+
 const TopFiveInRows = ({players}) => {
-  <div className = 'top-five-in-rows'>
-    {players.map((player, idx) => {22
-      <div className = 'player-card' key={idx}>
-        <img className = 'player-img' src=''/>
-        <div className = 'player-stats'>
-            {player.ppg}
-            {player.}
-        </div>
-      </div>
-    })}
-  </div>
+  const {stats} = NbaConsts;
+  const btnText = 'Remove';
+
+  return (
+    <div className = 'top-five-in-rows'>
+      {players.map((player, idx) => {
+        return (
+          <div className = 'player-row' key={idx}>
+            <div className = 'player-stats-for-row'>
+              <div className = 'top-idx'>{idx + 1}</div>
+              <img className = 'player-img-for-row' src='/mario.png'/>
+              <div className = 'prop-stats-for-row'>
+                <span className = 'stat'>{stats.ppg}</span>
+                  {player.fgp.toFixed(1)}
+              </div>
+              <div className = 'prop-stats-for-row'>
+                <span className = 'stat'>{stats.apg}</span>
+                  {player.ast.toFixed(1)}
+              </div>
+              <div className = 'prop-stats-for-row'>
+                <span className = 'stat'>{stats.rpg}</span>
+                  {player.rbpg.toFixed(1)}
+              </div>
+              <div className = 'prop-stats-for-row'>
+                <span className = 'stat'>{stats.ftp}</span>
+                  {player.ftp.toFixed(1)}
+              </div>
+              <div className = 'prop-stats-for-row'>
+                <span className = 'stat'>{stats.fgp3}</span>
+                  {player.fgtp.toFixed(1)}
+              </div>
+              <Button onClick={() => alert('HEY')} text={btnText} rvmBtn/>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 TopFiveInRows.propTypes = {
