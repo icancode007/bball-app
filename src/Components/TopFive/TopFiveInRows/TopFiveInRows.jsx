@@ -1,7 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import NbaConsts from '../../../lib/nbaconstants';
 import Button from '../../Button/Button';
+import NbaConsts from '../../../lib/nbaconstants';
+import PropTypes from 'prop-types';
+
+
 
 const TopFiveInRows = ({players}) => {
   const {stats} = NbaConsts;
@@ -38,7 +40,7 @@ const TopFiveInRows = ({players}) => {
               <Button onClick={() => alert('HEY')} text={btnText} rvmBtn/>
             </div>
           </div>
-      );
+        );
       })}
     </div>
   );
