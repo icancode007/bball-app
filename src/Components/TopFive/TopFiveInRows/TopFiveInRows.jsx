@@ -3,10 +3,8 @@ import Button from '../../Button/Button';
 import NbaConsts from '../../../lib/nbaconstants';
 import PropTypes from 'prop-types';
 
-
-
-const TopFiveInRows = ({players}) => {
-  const {stats} = NbaConsts;
+const TopFiveInRows = ({players, onClick}) => {
+  const { stats } = NbaConsts;
   const btnText = 'Remove';
 
   return (
@@ -16,7 +14,7 @@ const TopFiveInRows = ({players}) => {
           <div className = 'player-row' key={idx}>
             <div className = 'player-stats-for-row'>
               <div className = 'top-idx'>{idx + 1}</div>
-              <img className = 'player-img-for-row' src='/mario.png'/>
+              <img className = 'player-img-for-row' src='/mario.png' alt='placeholder' />
               <div className = 'prop-stats-for-row'>
                 <span className = 'stat'>{stats.ppg}</span>
                   {player.fgp.toFixed(1)}
@@ -37,7 +35,9 @@ const TopFiveInRows = ({players}) => {
                 <span className = 'stat'>{stats.fgp3}</span>
                   {player.fgtp.toFixed(1)}
               </div>
-              <Button onClick={() => alert('HEY')} text={btnText} rvmBtn/>
+              <div class="btn-wrapper">
+                <Button onClick={() => alert('HEY')} text={btnText} rvmBtn />
+              </div>
             </div>
           </div>
         );

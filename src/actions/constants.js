@@ -1,0 +1,2 @@
+export const DISPLAY_ROW_OR_COLUMN = 'DISPLAY_ROW_OR_COLUMN';
+// export const SEARCH_PLAYER = 'SEARCH_PLAYER';
