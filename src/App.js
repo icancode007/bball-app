@@ -10,12 +10,13 @@ import PlayerFinder from './Components/PlayerFinder/PlayerFinder'
 
 import './Styles/App/App.css';
 
+
 class App extends Component {
   render() {
-
     const teamList = ['LAL', 'BOS', 'GWS', 'ATL', 'SAS', 'CHI', 'PHX'];
     const store = createStore(reducer);
-
+    const nba = require("nba");
+    const joselo = nba.stats.playerInfo({PlayerID: 203518}).then(res => console.log(res));
     return (
       <Provider store={store}>
         <div className="App">

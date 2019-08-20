@@ -35,7 +35,7 @@ const TopFiveInRows = ({players, onClick}) => {
                 <span className = 'stat'>{stats.fgp3}</span>
                   {player.fgtp.toFixed(1)}
               </div>
-              <div class="btn-wrapper">
+              <div className="btn-wrapper">
                 <Button onClick={() => alert('HEY')} text={btnText} rvmBtn />
               </div>
             </div>

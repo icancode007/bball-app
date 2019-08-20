@@ -1,4 +1,4 @@
-const NBA = require('nba');
+// const NBA = require('nba');
 
 import {
   DISPLAY_ROW_OR_COLUMN,
@@ -11,5 +11,4 @@ export const displayTopFive = () => ({
 
 export const searchForPlayer = (player) => ({
   type: SEARCH_FOR_PLAYER,
-  payload:
 })
